@@ -36,3 +36,4 @@ classes
 ### this class will decide values for the dice in the different positions (each dice is also randomized on the board)
 
 
+Main runner will call the classes and set the variables

@@ -18,7 +18,7 @@ helpful links:
 3. main runner 
 4. point score class 
 
-####class graphic interface:
+#### class graphic interface:
 
 def __init__(self,master):
 

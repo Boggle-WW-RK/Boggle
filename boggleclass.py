@@ -6,15 +6,18 @@ from random import randint
 #A class for GUI (Graphical User Interface) - this class includes list for each the 6 posibilities of the 16 different dice and will establish 
 #an open list that can be appended to eventually to make the actual board in Tkinter. 
 class gui_board:
-<<<<<<< HEAD
-	def __init__(self, master): 
-=======
+
 	#constructor
 	def __init__(self, master):
->>>>>>> 33ceb07e26e3ab04be2caa932f1a14e3bdfeae56
+
 		self.master = master
 		#self.array and self.master and self.letters are functions and values used later in the Tkinter that will need to be edited and modified later
 		self.array
+
+	def setup():#Setup for board
+
+class dice:
+	def __init__():
 		self.letters =
 		#list of dice outputs
 		[['L', 'R', 'E', "V", 'D', "Y"]['R', 'N', 'Z', 'N', 'H', 'L']['E', 'D', 'L', 'X', 'R', 'I']['G','A','E','A','E','N']['QU', 'N', 'M', 'I', 'U', 'H']
@@ -23,14 +26,6 @@ class gui_board:
 		['A', 'O', 'T', 'T', 'W', 'O']]
 		#establishing the empty bored 
 		self.board = [[][][][]]
-<<<<<<< HEAD
-	def setup():#Setup for board
-
-=======
-#A class for dice... unlike classic dice this will have 
->>>>>>> 33ceb07e26e3ab04be2caa932f1a14e3bdfeae56
-class dice:
-	def __init__():
 
 	def assign_values(self): #Assigns a letter from the dictionary for each of the 16 cubes
 		counter = 0

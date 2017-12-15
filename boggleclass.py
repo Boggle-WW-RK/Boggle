@@ -1,6 +1,7 @@
 import random
 import sys
 import numpy as py4
+from random import randint
 class gui_board:
 	def __init__(self, master):
 		self.master = master
@@ -14,10 +15,14 @@ class gui_board:
 class dice:
 	def __init__():
 
-	def assign_values(self):
+	def assign_values(self): #Assigns a letter from the dictionary for each of the 16 cubes
+		counter = 0
 		for i in range(15):
-			#Pick random array, pick random element, delete element while keeping order
-			self.board[0][i].append(random(self.letters[i]))
+			counter+=1
+			
+			self.board[0][i].append(random(self.letters[randint(0,15)]))#Pick random array, pick random element, delete element while keeping order
+	def randompos(self): #Gives position board for each cube
+
 class points:
 	def __init__():
 
@@ -26,3 +31,14 @@ class timer:
 		self.time = time
 	def duration(self, time):
 x = numpy.delete(x, (0))
+
+class check(): 
+	def __init__(self):
+
+	def checking(): #Makes sure word is continuous
+
+
+gui_board
+dice
+runner
+point score

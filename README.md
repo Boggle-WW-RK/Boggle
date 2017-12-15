@@ -1,6 +1,16 @@
 
 # Boggle
 ### Plan
+
+#### description:
+Revant and Will's Boggle class is a project with the objective of practicing classes and functions in a functioning game. 
+
+helpful links: 
+[Boggle Rules!](http://www.fun-with-words.com/play_boggle.html)
+[classes in python](https://docs.python.org/3/tutorial/classes.html) 
+[dice class help](https://stackoverflow.com/questions/14409661/dice-generator-using-class-in-python)
+[tk help](https://docs.python.org/2/library/tk.html) 
+
 ### classes:
 
 1. make a graphic interface class

@@ -19,26 +19,46 @@ class dice:
 		counter = 0
 		for i in range(15):
 			counter+=1
-			
-			self.board[0][i].append(random(self.letters[randint(0,15)]))#Pick random array, pick random element, delete element while keeping order
-	def randompos(self): #Gives position board for each cube
+			if counter < 4:
+				self.board[0][0].append(random(self.letters[randint(0,15)]))  #Pick random array, pick random element, delete element while keeping order
+			if counter < 8 && counter > 3:
+				self.board[0][1].append(random(self.letters[randint(0,15)]))
+			if counter > 7 && counter < 12:
+				self.board[0][2].append(random(self.letters[randint(0,15)]))
+			if counter > 11 && counter < 16:
+				self.board[0][3].append(random(self.letters[randint(0,15)]))
+		for i in range(3)
+			print(self.board[0][i])
+	def random_pos(self): #Gives position board for each cube
 
-class points:
-	def __init__():
+class points: 
+	def __init__(self, word): #Needs word for input
+		self.word = word
+		self.score = 0
+
+	def point_assign(self): #Takes word and takes length of it
+		if len(self.word) <= 4:
+			self.score+=1
+		elif len(self.word) <= 5:
+			self.score+=2
+		elif len(self.word) <= 6:
+			self.score+=3
+		elif len(self.word) <= 7:
+			self.score+=5
+		elif len(self.word) >= 8:
+			self.score+=11
+
 
 class timer:
-	def __init__(self, time):
+	def __init__(self, time): #User can input time at beginning of the game
 		self.time = time
-	def duration(self, time):
-x = numpy.delete(x, (0))
+
+	def duration(self, time): #Sets up a timer which'll send off a siren mp3
+
 
 class check(): 
 	def __init__(self):
 
 	def checking(): #Makes sure word is continuous
 
-
-gui_board
-dice
-runner
-point score
+	#Returns true or false statment for fucntions in points class to run

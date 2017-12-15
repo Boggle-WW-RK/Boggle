@@ -1,7 +1,7 @@
 
 # Boggle
-###Plan
-###classes:
+### Plan
+### classes:
 
 1. make a graphic interface class
 2. make dice class 
@@ -62,7 +62,7 @@ Main runner will call the classes and set the variables
 
 _________________________________________________________________________________________________________________________
 
-####Who is working on what?
+#### Who is working on what?
 will:
 
 * plan 

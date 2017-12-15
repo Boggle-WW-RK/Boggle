@@ -1,3 +1,4 @@
+
 # Boggle
 ###Plan
 ###classes:
@@ -64,16 +65,22 @@ ________________________________________________________________________________
 ####Who is working on what?
 will:
 
-*plan 
-*readme 
-*point score
-*check 
+* plan 
+* readme 
+* point score
+* check 
 
 Revant: 
 
-*dice class 
-*User interface class 
-*main runner
+* dice class 
+* User interface class 
+* main runner
+
+
+
+
+
+
 
 
 

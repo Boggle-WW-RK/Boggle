@@ -2,16 +2,24 @@ import random
 import sys
 import numpy as py4
 from random import randint
+
+#A class for GUI (Graphical User Interface) - this class includes list for each the 6 posibilities of the 16 different dice and will establish 
+#an open list that can be appended to eventually to make the actual board in Tkinter. 
 class gui_board:
+	#constructor
 	def __init__(self, master):
 		self.master = master
+		#self.array and self.master and self.letters are functions and values used later in the Tkinter that will need to be edited and modified later
 		self.array
 		self.letters =
+		#list of dice outputs
 		[['L', 'R', 'E', "V", 'D', "Y"]['R', 'N', 'Z', 'N', 'H', 'L']['E', 'D', 'L', 'X', 'R', 'I']['G','A','E','A','E','N']['QU', 'N', 'M', 'I', 'U', 'H']
 		['D', 'S', 'Y', 'I', 'T', 'T']['I', 'T', 'S', 'E', 'S', 'O']['S', 'N', 'E', 'I', 'E', 'U']['R', 'Y', 'T', 'L', 'T', 'E']['A', 'S', 'P', 'F'. 'K', 'F']
 		['W', 'E', 'G', 'H', 'H', 'E']['R', 'V', 'T', 'H', 'E', 'W']['C', 'I', 'U', 'T', 'M', 'O']['S','C','A','O','P','H']['B', 'A', 'O', 'B', 'O', 'J']
 		['A', 'O', 'T', 'T', 'W', 'O']]
+		#establishing the empty bored 
 		self.board = [[][][][]]
+#A class for dice... unlike classic dice this will have 
 class dice:
 	def __init__():
 

@@ -3,7 +3,7 @@ import sys
 import numpy as py4
 from random import randint
 class gui_board:
-	def __init__(self, master):
+	def __init__(self, master): 
 		self.master = master
 		self.array
 		self.letters =
@@ -12,6 +12,8 @@ class gui_board:
 		['W', 'E', 'G', 'H', 'H', 'E']['R', 'V', 'T', 'H', 'E', 'W']['C', 'I', 'U', 'T', 'M', 'O']['S','C','A','O','P','H']['B', 'A', 'O', 'B', 'O', 'J']
 		['A', 'O', 'T', 'T', 'W', 'O']]
 		self.board = [[][][][]]
+	def setup():#Setup for board
+
 class dice:
 	def __init__():
 

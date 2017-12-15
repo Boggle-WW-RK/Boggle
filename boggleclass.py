@@ -3,10 +3,8 @@ import sys
 import numpy as py4
 from random import randint
 
-#A class for GUI (Graphical User Interface) - this class includes list for each the 6 posibilities of the 16 different dice and will establish 
-#an open list that can be appended to eventually to make the actual board in Tkinter. 
+#A class for GUI (Graphical User Interface) - this class will establish basic functions and an open list that can be appended to eventually to make the actual board in Tkinter. 
 class gui_board:
-
 	#constructor
 	def __init__(self, master):
 
@@ -15,7 +13,7 @@ class gui_board:
 		self.array
 
 	def setup():#Setup for board
-
+# this class is a dice class and includes a list for each the 6 posibilities of the 16 different dice and will assign random values to these dice and random locations on the bored
 class dice:
 	def __init__():
 		self.letters =
@@ -60,17 +58,19 @@ class points:
 		elif len(self.word) >= 8:
 			self.score+=11
 
-
+#this class is pretty simple and allows us to put a timer on the game that the user can actually choose before they make words
 class timer:
 	def __init__(self, time): #User can input time at beginning of the game
 		self.time = time
 
 	def duration(self, time): #Sets up a timer which'll send off a siren mp3
 
-
+#this class is complicated and will be used to check to make sure that the words found on the bored can actually be found on the bored 
 class check(): 
 	def __init__(self):
 
-	def checking(): #Makes sure word is continuous
+	def checkcord(): #checks to make sure letters are adjacent to eachother on the gameboard 
+		
+	def nodoubles(): #makes sure there are no doubles on the game bored
 
 	#Returns true or false statment for fucntions in points class to run

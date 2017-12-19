@@ -86,8 +86,27 @@ class dice:
 
 	#def intro():
 	#def random_pos(self, board): #Gives position board for each cube: If we have time, we can do a shuffle where we reoganize all the letters on the board
+howlong = int(input('how much time would you like to play for \n suggested: \n for pros: 120 seconds \n for experienced: 150 seconds \n for begginers 180 seconds'))
+
+class timer(howlong):
+    def __init__(self):
+        self.initial = howlong
+    
+    current = initial
+    
+    def current_time():
+        return current
 
 
+    def start_time():
+        # timeit.timeit(howlong)
+        for i in range(initial):
+            if i > 0: 
+                i -= 1
+                current = i
+                time.sleep(1)
+
+	
 class scoring(self):
     def __init__(self, userword): 
         self.word = userword

@@ -88,22 +88,22 @@ class dice:
 	#def random_pos(self, board): #Gives position board for each cube: If we have time, we can do a shuffle where we reoganize all the letters on the board
 
 
-class points: 
-	def __init__(self, word): #Needs word for input
-		self.word = word
-		self.score = 0
+class scoring(self):
+    def __init__(self, userword): 
+        self.word = userword
+        self.score = 0
 
-	def point_assign(self): #Takes word and takes length of it
-		if len(self.word) <= 4:
-			self.score+=1
-		elif len(self.word) <= 5:
-			self.score+=2
-		elif len(self.word) <= 6:
-			self.score+=3
-		elif len(self.word) <= 7:
-			self.score+=5
-		elif len(self.word) >= 8:
-			self.score+=11
+    def pointawarding(self): 
+        if len(self.word) <= 4:
+            self.score+=1
+        elif len(self.word) <= 5:
+            self.score+=2
+        elif len(self.word) <= 6:
+            self.score+=3
+        elif len(self.word) <= 7:
+            self.score+=5
+        elif len(self.word) >= 8:
+            self.score+=11
 
 #this class is pretty simple and allows us to put a timer on the game that the user can actually choose before they make words
 class timer:

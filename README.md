@@ -44,7 +44,7 @@ self.display() -Creates grid of letters
 
 self.root.mainloop() – main function for the display of everything 
     
-####class point_score:
+#### class point_score:
 def _init_(self, word_count)
 
 self.word_count = word_count

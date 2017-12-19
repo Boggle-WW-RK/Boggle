@@ -6,26 +6,21 @@ import time
 from tkinter import *
 
 #A class for GUI (Graphical User Interface) - this class will establish basic functions and an open list that can be appended to eventually to make the actual board in Tkinter. 
-<<<<<<< HEAD
 #add new grid, while loop if this block is not hit don't run, keep adding during while 
 #empty array vairable for user input
 #clear button if user doesn't want to do word
 # this class is a dice class and includes a list for each the 6 posibilities of the 16 different dice and will assign random values to these dice and random locations on the bored
 class dice:
-=======
 class gui_board:
 	#constructor
->>>>>>> 0a682f1856bbf34848d0939e9bf0354f7370f4bc
 	def __init__(self, master):
 		self.master = master
-<<<<<<< HEAD
 		master.title("Boggle 2.0") #Window header
 		self.root = Tk() #Setup for root window
 		self.label = Label(master, text="Welcome to Boggle")
 		self.label.pack()
 		self.frame1 = Frame(self.root, width = 120, height = 120) #Window size for tkinter window
 		self.frame1.grid()
-=======
 		#self.array and self.master and self.letters are functions and values used later in the Tkinter that will need to be edited and modified later
 		self.array
 
@@ -39,7 +34,6 @@ class dice:
 		['D', 'S', 'Y', 'I', 'T', 'T']['I', 'T', 'S', 'E', 'S', 'O']['S', 'N', 'E', 'I', 'E', 'U']['R', 'Y', 'T', 'L', 'T', 'E']['A', 'S', 'P', 'F'. 'K', 'F']
 		['W', 'E', 'G', 'H', 'H', 'E']['R', 'V', 'T', 'H', 'E', 'W']['C', 'I', 'U', 'T', 'M', 'O']['S','C','A','O','P','H']['B', 'A', 'O', 'B', 'O', 'J']
 		['A', 'O', 'T', 'T', 'W', 'O']]
->>>>>>> 0a682f1856bbf34848d0939e9bf0354f7370f4bc
 		#establishing the empty bored 
 		self.board = [[] for _ in range(4)]
 		self.l = []
@@ -91,8 +85,6 @@ class dice:
 
 
 	#def intro():
-
-
 	#def random_pos(self, board): #Gives position board for each cube: If we have time, we can do a shuffle where we reoganize all the letters on the board
 
 
@@ -136,10 +128,7 @@ class end_game:
 		self.label = Label(text="Great Job!")
         self.label.pack()
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 0a682f1856bbf34848d0939e9bf0354f7370f4bc
 #this class is complicated and will be used to check to make sure that the words found on the bored can actually be found on the bored 
 class check(): 
 	def __init__(self, word, coord):
@@ -166,38 +155,16 @@ class check():
       		if [r+1, c-1] in self.mines:
          			self.near+=1
 
-<<<<<<< HEAD
 		else:
 			return False
-=======
 	def checkcord(): #checks to make sure letters are adjacent to eachother on the gameboard 
 		
->>>>>>> 0a682f1856bbf34848d0939e9bf0354f7370f4bc
 	def nodoubles(): #makes sure there are no doubles on the game bored
 
 	#Returns true or false statment for fucntions in points class to run
 
 dice_roll = dice()
 dice_roll.assign_values()
-
-
-
-''' #Example
-class Car(object):
-
-    wheels = 4
-
-    def __init__(self, make, model):
-        self.make = make
-        self.model = model
-
-mustang = Car('Ford', 'Mustang')
-print mustang.wheels
-# 4
-print Car.wheels
-# 4
-'''
-
 
 
 

@@ -86,21 +86,14 @@ class dice:
 
 	#def intro():
 	#def random_pos(self, board): #Gives position board for each cube: If we have time, we can do a shuffle where we reoganize all the letters on the board
-howlong = int(input('how much time would you like to play for \n suggested: \n for pros: 120 seconds \n for experienced: 150 seconds \n for begginers 180 seconds'))
 
-class timer(howlong):
+class timer():
     def __init__(self):
-        self.initial = howlong
-    
-    current = initial
-    
-    def current_time():
-        return current
-
+        self.initial = 180
 
     def start_time():
         # timeit.timeit(howlong)
-        for i in range(initial):
+        for i in range(180):
             if i > 0: 
                 i -= 1
                 current = i
@@ -125,19 +118,6 @@ class scoring(self):
             self.score+=11
 
 #this class is pretty simple and allows us to put a timer on the game that the user can actually choose before they make words
-class timer:
-	def __init__(self, time): #User can input time at beginning of the game
-		self.time = time
-
-	def countdown(t): #https://stackoverflow.com/questions/25189554/countdown-clock-0105
-    	while t:
-        	mins, secs = divmod(t, 60)
-        	timeformat = '{:02d}:{:02d}'.format(mins, secs)
-        	print(timeformat, end='\r')
-        	time.sleep(1)
-        	t -= 1
-    	print('Time is UP!\n\n\n\n\n')
-		#countdown(180)
 
 class end_game:
 	def __init__(self, time, score):
@@ -182,8 +162,6 @@ class check():
 
 	#Returns true or false statment for fucntions in points class to run
 
-dice_roll = dice()
-dice_roll.assign_values()
 
 
 

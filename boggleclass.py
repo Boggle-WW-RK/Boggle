@@ -42,7 +42,7 @@ class dice:
 		['W', 'E', 'G', 'H', 'H', 'E'],['R', 'V', 'T', 'H', 'E', 'W'],['C', 'I', 'U', 'T', 'M', 'O'],['S','C','A','O','P','H'],['B', 'A', 'O', 'B', 'O', 'J'],
 		['A', 'O', 'T', 'T', 'W', 'O']]
 		self.assign_values()
-		self.display() #Creates grid of buttons with mines and numbers
+		self.display() #Creates grid of buttons with dice values 
 		# self.play()#Calls main function which plays
 		self.root.mainloop() #setup window
 	

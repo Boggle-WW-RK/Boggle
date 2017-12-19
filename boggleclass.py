@@ -10,7 +10,7 @@ from tkinter import *
 #empty array vairable for user input
 #clear button if user doesn't want to do word
 # this class is a dice class and includes a list for each the 6 posibilities of the 16 different dice and will assign random values to these dice and random locations on the bored
-class dice:
+
 class gui_board:
 	#constructor
 	def __init__(self, master):

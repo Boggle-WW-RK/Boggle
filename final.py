@@ -24,12 +24,12 @@ class dice: #in the dice class we will be assigning dice values and beggining to
 		self.completed_words = [] #empty list that words can be appended to
 		self.score=0 #original value for this variable which will change later
 		self.start=True #simple boolean established now that we can turn false later 
-		self.wordnow=''
+		self.wordnow='' #basic layout 
 		self.letters = [['L', 'R', 'E', "V", 'D', "Y"],['R', 'N', 'Z', 'N', 'H', 'L'],['E', 'D', 'L', 'X', 'R', 'I'],['G','A','E','A','E','N'],['Q', 'N', 'M', 'I', 'U', 'H'],
 		['D', 'S', 'Y', 'I', 'T', 'T'],['I', 'T', 'S', 'E', 'S', 'O'],['S', 'N', 'E', 'I', 'E', 'U'],['R', 'Y', 'T', 'L', 'T', 'E'],['A', 'S', 'P', 'F', 'K', 'F'],
 		['W', 'E', 'G', 'H', 'H', 'E'],['R', 'V', 'T', 'H', 'E', 'W'],['C', 'I', 'U', 'T', 'M', 'O'],['S','C','A','O','P','H'],['B', 'A', 'O', 'B', 'O', 'J'],
-		['A', 'O', 'T', 'T', 'W', 'O']]
-		self.assign_values()
+		['A', 'O', 'T', 'T', 'W', 'O']] #letters to be assigned to the cubes, these cubes were exactly reproduced from the actual boggle dice in order to keep accuracy
+		self.assign_values() #calls a function to assign values
 		self.display() #Creates grid of buttons with mines and numbers
 		# self.play()#Calls main function which plays
 		self.root.mainloop() #setup window
@@ -37,53 +37,53 @@ class dice: #in the dice class we will be assigning dice values and beggining to
 
 	def display(self): #Setup for GUI window 10x10 window
 		#intro = Label(self.root, text="Boggle is just a simple word search game. The player gets three minutes to find as many words on the board that are longer than two letters. Words can only be created by touching tiles (diagonal, vertical, or horizontal) only and you can not use the same tile twice in the same word.")
-		msg = Message(self.master, text = "Instructions: Boggle is just a simple word search game. You get unlimited time to find as many words on the board that are longer than two letters. Words can only be created by touching tiles (diagonal, vertical, or horizontal) only and you can not use the same tile twice in the same word.")
-		msg.config(bg='lightgreen', font=('times', 24, 'italic'))
+		msg = Message(self.master, text = "Instructions: Boggle is just a simple word search game. You get unlimited time to find as many words on the board that are longer than two letters. Words can only be created by touching tiles (diagonal, vertical, or horizontal) only and you can not use the same tile twice in the same word.") #basic instructions so the user knows what the instructions are
+		msg.config(bg='lightgreen', font=('times', 24, 'italic')) #sets the way the type looks for the reader (color font style etc.
 		msg.pack()
 
-		button2 = Label(self.frame1, text="Welcome to our Boggle Game!", width = 30, height = 3)
-		button2.config(font=('Comic Sans MS', 24, 'italic'))
-		button2.grid(row=0, column=0, columnspan = 8)
+		button2 = Label(self.frame1, text="Welcome to our Boggle Game!", width = 30, height = 3) #lating out this specific display 
+		button2.config(font=('Comic Sans MS', 24, 'italic')) #tkinter functions and layout of text
+		button2.grid(row=0, column=0, columnspan = 8) #layout 
 
-		enter = Button(self.frame1, text='Enter', width = 6, height = 3, command=self.entercheck)
-		enter.grid(row=1, column=5, rowspan=2)
+		enter = Button(self.frame1, text='Enter', width = 6, height = 3, command=self.entercheck) #tkinter command for layout for specific button
+		enter.grid(row=1, column=5, rowspan=2) #layout of this button where it is
 
 
 		clear = Button(self.frame1, text='Clear', width = 6, height = 3, command=self.clearword)
-		clear.grid(row=1, column=6, rowspan=2)
+		clear.grid(row=1, column=6, rowspan=2) #these two lines are where this button is
 
 		currentword1 = Label(self.frame1, text="Word:", width = 4, height = 2)
 		currentword1.grid(row=3, column = 5, rowspan=2)
 		currentword = Label(self.frame1, text= self.wordnow, width = 20, height = 2)
-		currentword.grid(row=3, column=6, rowspan=2)
+		currentword.grid(row=3, column=6, rowspan=2) #this block of lines is the basic layout for the current word and the basic fumnctionst that apply to it
 
 		
 		scoreboard = Label(self.frame1, text='Score:',  width = 6, height = 3)
-		scoreboard.grid(row=5, columns=5, rowspan=4)
+		scoreboard.grid(row=5, columns=5, rowspan=4) #this is the simple scoreboard that displays your score
 
 		start = Button(self.frame1, text='Start', width = 6, height = 3, command=self.twofuncforstart)
-		start.grid(row=5, column=6, rowspan=4)
+		start.grid(row=5, column=6, rowspan=4) #layout of this button (start)
 
 		self.board_createnofunc()
 
-	def twofuncforstart(self):
+	def twofuncforstart(self): 
 		self.board_create()
-		self.falsefunc()
+		self.falsefunc() #function that simply calls of functions to set up the board and begin
 
 	def falsefunc(self):
 		start = Button(self.frame1, text='End', width = 6, height = 3, command=self.root.destroy)
-		start.grid(row=5, column=6, rowspan=4)
+		start.grid(row=5, column=6, rowspan=4) #function for the end 
 
 	def board_create(self):
 		for r in range(4):
 			for c in range(4):
 				button = Button(self.frame1, text=str(self.board[r][c]), width = 6, height = 3, command=partial(self.greyout, r, c))#This is how you create a button.
-				button.grid(row=r+1, column=c+1)
+				button.grid(row=r+1, column=c+1)#function to create and set up board with tkinter 
 	def board_createnofunc(self):
 			for r in range(4):
 				for c in range(4):
 					button = Button(self.frame1, text=str(self.board[r][c]), width = 6, height = 3)#No function
-					button.grid(row=r+1, column=c+1)
+					button.grid(row=r+1, column=c+1) #assists in setting up the board
 
 	def greyout(self, r, c):
 			
@@ -92,9 +92,9 @@ class dice: #in the dice class we will be assigning dice values and beggining to
 			currentword1.grid(row=3, column = 5, rowspan=2)
 			currentword = Label(self.frame1, text= self.wordnow, width = 20, height = 2)
 			currentword.grid(row=3, column=6, rowspan=2)
-			self.check(r,c)
+			self.check(r,c) 
 		
-	def check(self, r, c):
+	def check(self, r, c): #this class checks to see if the word is playable on the boggle board- this class was incredibly difficult to set up and using minesweeper didnt really help that much but Revant was able to figure it out in the end
 		self.board_createnofunc()
 		if (r==1 and c==1) or (r==1 and c==2) or (r==2 and c==1) or (r==2 and c==2): #central
 			r1 = r+1
@@ -317,6 +317,7 @@ class dice: #in the dice class we will be assigning dice values and beggining to
 			c8 = c-1
 			button = Button(self.frame1, text=str(self.board[r8][c8]), width = 6, height = 3, command=partial(self.greyout, r8, c8))
 			button.grid(row=r8+1, column=c8+1)
+			#this function was incredsibly hard to do and very time consuming but it serves it purpose of checking one to the left right up down to see if the letter exists next to it
 		
 
 
@@ -326,7 +327,7 @@ class dice: #in the dice class we will be assigning dice values and beggining to
 		currentword1.grid(row=3, column = 5, rowspan=2)
 		currentword = Label(self.frame1, text= self.wordnow, width = 20, height = 2)
 		currentword.grid(row=3, column=6, rowspan=2)
-		self.board_create()
+		self.board_create() #this function allows the user to clear the word and is displayed in tkinter as a button
 		
 	def entercheck(self):
 		if self.wordnow in self.completed_words:
@@ -345,9 +346,9 @@ class dice: #in the dice class we will be assigning dice values and beggining to
 			scoreboard = Label(self.frame1, text='Score: '+ str(self.score),  width = 6, height = 3)
 			scoreboard.grid(row=5, columns=5, rowspan=4)
 		self.completed_words.append(self.wordnow)
-		self.clearword()
+		self.clearword() #this functions ensures that the words you put in are longer than two letters and also also assigns the score for these points and then modifies the score variable
 
-	def assign_values(self): #Assigns a letter from the dictionary for each of the 16 cubes
+	def assign_values(self): #Assigns a letter from the dictionary for each of the 16 cubes (this is for the begging of the game it was called way earlier byt it allows each dice to be chosen randomly)
 		counter = -1
 		dice = 15
 		for i in range(16):
@@ -374,10 +375,10 @@ class dice: #in the dice class we will be assigning dice values and beggining to
 				dice-=1
 		for i in range(4):
 			print(self.board[i])
-	def destroy(self):
+	def destroy(self): #function to destroy (destroy is a built in)
 		root.destroy()
 
 		
-dice_roll = dice(Tk())
+dice_roll = dice(Tk()) #callinf fuction and class
 
 

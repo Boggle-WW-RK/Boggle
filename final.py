@@ -12,7 +12,7 @@ from threading import Timer
 #We spent a lot of time on this project especially on the timer and error check.
 #Tkinter was hard to work with also
 
-class dice: #in the dice class we will be assigning dice values and beggining to lay out the bored so that it is easier to do it in a later class
+class dice: #in the dice class we will be assigning dice values and beggining to lay out the bored so that it is easier to do it in a later function
 	def __init__(self, master): 
 		self.master = master
 		master.title("Boggle 2.0") #Window header - The first display the user sees. Interesting point of user interface.
@@ -417,4 +417,5 @@ class dice: #in the dice class we will be assigning dice values and beggining to
 		
 dice_roll = dice(Tk()) #callinf fuction and class
 
+#more in read me 
 

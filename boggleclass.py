@@ -6,15 +6,24 @@ import time
 from tkinter import *
 
 #A class for GUI (Graphical User Interface) - this class will establish basic functions and an open list that can be appended to eventually to make the actual board in Tkinter. 
+<<<<<<< HEAD
 
+=======
+>>>>>>> d7be0b3e24e9b060c98216a8ce7cf785587d9f68
 #add new grid, while loop if this block is not hit don't run, keep adding during while 
 #empty array vairable for user input
 #clear button if user doesn't want to do word
 # this class is a dice class and includes a list for each the 6 posibilities of the 16 different dice and will assign random values to these dice and random locations on the bored
+<<<<<<< HEAD
 '''
 class gui_board:
 	#constructor
 
+=======
+
+class gui_board:
+	#constructor
+>>>>>>> d7be0b3e24e9b060c98216a8ce7cf785587d9f68
 	def __init__(self, master):
 		self.master = master
 		master.title("Boggle 2.0") #Window header
@@ -27,6 +36,7 @@ class gui_board:
 '''
 # this class is a dice class and includes a list for each the 6 posibilities of the 16 different dice and will assign random values to these dice and random locations on the bored
 class dice:
+<<<<<<< HEAD
 	def __init__(self, master):
 		self.master = master
 		master.title("Boggle 2.0") #Window header
@@ -35,6 +45,15 @@ class dice:
 		self.label.pack()
 		self.frame1 = Frame(self.root, width = 120, height = 120) #Window size for tkinter window
 		self.frame1.grid()
+=======
+	def __init__():
+		self.letters =
+		#list of dice outputs
+		[['L', 'R', 'E', "V", 'D', "Y"]['R', 'N', 'Z', 'N', 'H', 'L']['E', 'D', 'L', 'X', 'R', 'I']['G','A','E','A','E','N']['QU', 'N', 'M', 'I', 'U', 'H']
+		['D', 'S', 'Y', 'I', 'T', 'T']['I', 'T', 'S', 'E', 'S', 'O']['S', 'N', 'E', 'I', 'E', 'U']['R', 'Y', 'T', 'L', 'T', 'E']['A', 'S', 'P', 'F'. 'K', 'F']
+		['W', 'E', 'G', 'H', 'H', 'E']['R', 'V', 'T', 'H', 'E', 'W']['C', 'I', 'U', 'T', 'M', 'O']['S','C','A','O','P','H']['B', 'A', 'O', 'B', 'O', 'J']
+		['A', 'O', 'T', 'T', 'W', 'O']]
+>>>>>>> d7be0b3e24e9b060c98216a8ce7cf785587d9f68
 		#establishing the empty bored 
 		self.board = [[] for _ in range(4)]
 		self.l = []
@@ -50,7 +69,7 @@ class dice:
 		['W', 'E', 'G', 'H', 'H', 'E'],['R', 'V', 'T', 'H', 'E', 'W'],['C', 'I', 'U', 'T', 'M', 'O'],['S','C','A','O','P','H'],['B', 'A', 'O', 'B', 'O', 'J'],
 		['A', 'O', 'T', 'T', 'W', 'O']]
 		self.assign_values()
-		self.display() #Creates grid of buttons with mines and numbers
+		self.display() #Creates grid of buttons with dice values 
 		# self.play()#Calls main function which plays
 		self.root.mainloop() #setup window
 	
@@ -93,42 +112,45 @@ class dice:
 
 
 	#def intro():
+<<<<<<< HEAD
 
 
 	
+=======
+	#def random_pos(self, board): #Gives position board for each cube: If we have time, we can do a shuffle where we reoganize all the letters on the board
+>>>>>>> d7be0b3e24e9b060c98216a8ce7cf785587d9f68
 
+class timer():
+    def __init__(self):
+        self.initial = 180
 
-class points: 
-	def __init__(self, word): #Needs word for input
-		self.word = word
-		self.score = 0
+    def start_time():
+        # timeit.timeit(howlong)
+        for i in range(180):
+            if i > 0: 
+                i -= 1
+                current = i
+                time.sleep(1)
 
-	def point_assign(self): #Takes word and takes length of it
-		if len(self.word) <= 4:
-			self.score+=1
-		elif len(self.word) <= 5:
-			self.score+=2
-		elif len(self.word) <= 6:
-			self.score+=3
-		elif len(self.word) <= 7:
-			self.score+=5
-		elif len(self.word) >= 8:
-			self.score+=11
+	
+class scoring(self):
+    def __init__(self, userword): 
+        self.word = userword
+        self.score = 0
+
+    def pointawarding(self): 
+        if len(self.word) <= 4:
+            self.score+=1
+        elif len(self.word) <= 5:
+            self.score+=2
+        elif len(self.word) <= 6:
+            self.score+=3
+        elif len(self.word) <= 7:
+            self.score+=5
+        elif len(self.word) >= 8:
+            self.score+=11
 
 #this class is pretty simple and allows us to put a timer on the game that the user can actually choose before they make words
-class timer:
-	def __init__(self, time): #User can input time at beginning of the game
-		self.time = time
-
-	def countdown(t): #https://stackoverflow.com/questions/25189554/countdown-clock-0105
-    	while t:
-        	mins, secs = divmod(t, 60)
-        	timeformat = '{:02d}:{:02d}'.format(mins, secs)
-        	print(timeformat, end='\r')
-        	time.sleep(1)
-        	t -= 1
-    	print('Time is UP!\n\n\n\n\n')
-		#countdown(180)
 
 class end_game:
 	def __init__(self, time, score):
@@ -138,6 +160,10 @@ class end_game:
 		self.label = Label(text="Great Job!")
         self.label.pack()
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> d7be0b3e24e9b060c98216a8ce7cf785587d9f68
 #this class is complicated and will be used to check to make sure that the words found on the bored can actually be found on the bored 
 class check(): 
 	def __init__(self, word, coord):
@@ -166,13 +192,17 @@ class check():
 
 		else:
 			return False
+<<<<<<< HEAD
 
+=======
+>>>>>>> d7be0b3e24e9b060c98216a8ce7cf785587d9f68
 	def checkcord(): #checks to make sure letters are adjacent to eachother on the gameboard 
 		
 	def nodoubles(): #makes sure there are no doubles on the game bored
 
 	#Returns true or false statment for fucntions in points class to run
 
+<<<<<<< HEAD
 
 
 
@@ -193,6 +223,8 @@ print Car.wheels
 # 4
 '''
 
+=======
+>>>>>>> d7be0b3e24e9b060c98216a8ce7cf785587d9f68
 
 
 

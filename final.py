@@ -10,7 +10,7 @@ import math
 from threading import Timer
 #basic imputs
 
-class dice: #in the dice class we will be assigning dice values and beggining to lay out the bored so that it is easier to do it in a later class
+class dice: #in the dice class we will be assigning dice values and beggining to lay out the bored so that it is easier to do it in a later function
 	def __init__(self, master): 
 		self.master = master
 		master.title("Boggle 2.0") #Window header - The first display the user sees. Interesting point of user interface.

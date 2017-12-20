@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 from main import dice
 
 dice_roll = dice(Tk())
@@ -10,18 +10,12 @@ import numpy as py4
 import time
 from tkinter import *
 
-play_game = input('would you like to play? (y/n)')
-while play_game = 'y':
-  x.gui_board()
-  x.dice()
-  x.timer() 
-  x.check()
-  x.scoring()
-  x.end_game()
-  play_game = input('would you like to play again? (y/n)')
-if play_game = 'n':
-  print: 'ok thank you'
- playgame = input('please type y for yes or n for no') 
 
+#simple class calls. Nothing too complicated at all about the runner calss just runs the differnt classes in sequence
+  x.gui_board() #set up the board originally set up display and titles 
+  x.dice() #set up the dice on the board
+  x.timer() #start the timer
+  x.check() #check to make sure that the inputs are actually playable - this is done by restricting the letters you can click
+  x.scoring() #score the inputs by using the len function
+  x.end_game() #the end 
 
->>>>>>> d7be0b3e24e9b060c98216a8ce7cf785587d9f68

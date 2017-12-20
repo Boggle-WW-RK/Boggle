@@ -381,4 +381,5 @@ class dice: #in the dice class we will be assigning dice values and beggining to
 		
 dice_roll = dice(Tk()) #callinf fuction and class
 
+#more in read me 
 

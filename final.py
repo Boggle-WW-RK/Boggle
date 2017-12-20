@@ -8,7 +8,9 @@ from functools import partial
 import datetime
 import math
 from threading import Timer
-#basic imputs
+#Boggle by Will and Revant
+#We spent a lot of time on this project especially on the timer and error check.
+#Tkinter was hard to work with also
 
 class dice: #in the dice class we will be assigning dice values and beggining to lay out the bored so that it is easier to do it in a later class
 	def __init__(self, master): 
@@ -23,7 +25,9 @@ class dice: #in the dice class we will be assigning dice values and beggining to
 		self.board = [[] for _ in range(4)]  #allows the game to be lated out properly
 		self.completed_words = [] #empty list that words can be appended to
 		self.score=0 #original value for this variable which will change later
-		self.start=True #simple boolean established now that we can turn false later 
+
+		self.start = 0 
+		self.end = 0
 		self.wordnow='' #basic layout 
 		self.letters = [['L', 'R', 'E', "V", 'D', "Y"],['R', 'N', 'Z', 'N', 'H', 'L'],['E', 'D', 'L', 'X', 'R', 'I'],['G','A','E','A','E','N'],['Q', 'N', 'M', 'I', 'U', 'H'],
 		['D', 'S', 'Y', 'I', 'T', 'T'],['I', 'T', 'S', 'E', 'S', 'O'],['S', 'N', 'E', 'I', 'E', 'U'],['R', 'Y', 'T', 'L', 'T', 'E'],['A', 'S', 'P', 'F', 'K', 'F'],
@@ -37,7 +41,7 @@ class dice: #in the dice class we will be assigning dice values and beggining to
 
 	def display(self): #Setup for GUI window 10x10 window
 		#intro = Label(self.root, text="Boggle is just a simple word search game. The player gets three minutes to find as many words on the board that are longer than two letters. Words can only be created by touching tiles (diagonal, vertical, or horizontal) only and you can not use the same tile twice in the same word.")
-		msg = Message(self.master, text = "Instructions: Boggle is just a simple word search game. You get unlimited time to find as many words on the board that are longer than two letters. Words can only be created by touching tiles (diagonal, vertical, or horizontal) only and you can not use the same tile twice in the same word.") #basic instructions so the user knows what the instructions are
+		msg = Message(self.master, text = "Instructions: Boggle is just a simple word search game. You get 3 min to find as many words on the board that are longer than two letters. Words can only be created by touching tiles (diagonal, vertical, or horizontal) only and you can not use the same tile twice in the same word.") #basic instructions so the user knows what the instructions are
 		msg.config(bg='lightgreen', font=('times', 24, 'italic')) #sets the way the type looks for the reader (color font style etc.
 		msg.pack()
 
@@ -64,11 +68,42 @@ class dice: #in the dice class we will be assigning dice values and beggining to
 		start = Button(self.frame1, text='Start', width = 6, height = 3, command=self.twofuncforstart)
 		start.grid(row=5, column=6, rowspan=4) #layout of this button (start)
 
+		
+
 		self.board_createnofunc()
+		time.ctime()
 
 	def twofuncforstart(self): 
 		self.board_create()
 		self.falsefunc() #function that simply calls of functions to set up the board and begin
+		self.timestart()
+
+	def timestart(self):
+		time.ctime()
+		self.start = time.ctime() 
+		self.start = self.start.split(" ")
+		self.start = self.start[3].split(":")
+		
+
+	def timeend(self):
+		time.ctime()
+		self.end = time.ctime() 
+		self.end = self.end.split(" ")
+		self.end = self.end[3].split(":")
+		return self.end
+
+	def timecheck(self, end):
+		print(end)
+		print(self.start)
+		if int(end[1])>=int(self.start[1])+1:
+			if int(end[2])>=int(self.start[2]):
+				print('You got a score of: '+ str(self.score))
+				time.sleep(4)
+				self.root.destroy()
+				self.master.destroy()
+				self. __init__(Tk())
+				exit()
+				
 
 	def falsefunc(self):
 		start = Button(self.frame1, text='End', width = 6, height = 3, command=self.root.destroy)
@@ -86,7 +121,8 @@ class dice: #in the dice class we will be assigning dice values and beggining to
 					button.grid(row=r+1, column=c+1) #assists in setting up the board
 
 	def greyout(self, r, c):
-			
+			self.timecheck(self.timeend())
+
 			self.wordnow+=self.board[r][c]
 			currentword1 = Label(self.frame1, text="Word:", width = 4, height = 2)
 			currentword1.grid(row=3, column = 5, rowspan=2)

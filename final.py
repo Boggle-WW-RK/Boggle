@@ -8,22 +8,22 @@ from functools import partial
 import datetime
 import math
 from threading import Timer
+#basic imputs
 
-
-class dice:
-	def __init__(self, master):
+class dice: #in the dice class we will be assigning dice values and beggining to lay out the bored so that it is easier to do it in a later class
+	def __init__(self, master): 
 		self.master = master
-		master.title("Boggle 2.0") #Window header
+		master.title("Boggle 2.0") #Window header - The first display the user sees. Interesting point of user interface.
 		self.root = Tk() #Setup for root window
-		#self.label = Label(master, , width = 60, height = 60)
+		#self.label = Label(master, , width = 60, height = 60) #we used these to test bevause it worked more effectively and quicker with these parameters
 		#self.label.pack()
 		self.frame1 = Frame(self.root, width = 120, height = 120) #Window size for tkinter window
-		self.frame1.grid()
+		self.frame1.grid() #tkinters inputs to lay out the board 
 		#establishing the empty bored 
-		self.board = [[] for _ in range(4)]
-		self.completed_words = []
-		self.score=0
-		self.start=True
+		self.board = [[] for _ in range(4)]  #allows the game to be lated out properly
+		self.completed_words = [] #empty list that words can be appended to
+		self.score=0 #original value for this variable which will change later
+		self.start=True #simple boolean established now that we can turn false later 
 		self.wordnow=''
 		self.letters = [['L', 'R', 'E', "V", 'D', "Y"],['R', 'N', 'Z', 'N', 'H', 'L'],['E', 'D', 'L', 'X', 'R', 'I'],['G','A','E','A','E','N'],['Q', 'N', 'M', 'I', 'U', 'H'],
 		['D', 'S', 'Y', 'I', 'T', 'T'],['I', 'T', 'S', 'E', 'S', 'O'],['S', 'N', 'E', 'I', 'E', 'U'],['R', 'Y', 'T', 'L', 'T', 'E'],['A', 'S', 'P', 'F', 'K', 'F'],

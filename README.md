@@ -79,13 +79,14 @@ will:
 * readme 
 * point score
 * check 
+* runner
 
 Revant: 
 
 * dice class 
 * User interface class 
 * main runner
-
+* check
 
 
 

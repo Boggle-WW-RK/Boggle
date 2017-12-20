@@ -377,7 +377,6 @@ class dice:
 	def destroy(self):
 		root.destroy()
 
-		
-dice_roll = dice(Tk())
+
 
 

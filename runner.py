@@ -1,15 +1,15 @@
 
-from main import dice
-
-dice_roll = dice(Tk())
-=======
-from boggleclass import gui_board, dice, timer, scoring, end_game, check
 import random
 import sys
 import numpy as py4
+from random import randint
 import time
 from tkinter import *
+from functools import partial
+import datetime
+import math
+from threading import Timer
+from final import dice
 
+dice_roll = dice(Tk())
 
-#simple class call. Nothing too complicated at all about the runner just runs the class
-  x.dice() #set up the dice on the boar

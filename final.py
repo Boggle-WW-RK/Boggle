@@ -95,12 +95,14 @@ class dice: #in the dice class we will be assigning dice values and beggining to
 	def timecheck(self, end):
 		print(end)
 		print(self.start)
+		print(int(end[1])>=int(self.start[1])+1)
+		print(int(end[2])>=int(self.start[2]))
 		if int(end[1])>=int(self.start[1])+1:
 			if int(end[2])>=int(self.start[2]):
 				print('You got a score of: '+ str(self.score))
 				time.sleep(4)
 				self.root.destroy()
-				self.master.destroy()
+				
 				self. __init__(Tk())
 				exit()
 				
@@ -131,7 +133,7 @@ class dice: #in the dice class we will be assigning dice values and beggining to
 			self.check(r,c) 
 		
 	def check(self, r, c): #this class checks to see if the word is playable on the boggle board- this class was incredibly difficult to set up and using minesweeper didnt really help that much but Revant was able to figure it out in the end
-		self.board_createnofunc()
+		self.board_createnofunc() #sets all buttons to duds and the folllowing code makes the surroudning buttons of the button clicked usable
 		if (r==1 and c==1) or (r==1 and c==2) or (r==2 and c==1) or (r==2 and c==2): #central
 			r1 = r+1
 			c1 = c
@@ -357,7 +359,7 @@ class dice: #in the dice class we will be assigning dice values and beggining to
 		
 
 
-	def clearword(self):
+	def clearword(self): #clears word so user can reset word if mistake was made
 		self.wordnow=''
 		currentword1 = Label(self.frame1, text="Word:", width = 4, height = 2)
 		currentword1.grid(row=3, column = 5, rowspan=2)
@@ -365,7 +367,7 @@ class dice: #in the dice class we will be assigning dice values and beggining to
 		currentword.grid(row=3, column=6, rowspan=2)
 		self.board_create() #this function allows the user to clear the word and is displayed in tkinter as a button
 		
-	def entercheck(self):
+	def entercheck(self): #checks to see if word is in already inputted list, if it is not, it will be scored
 		if self.wordnow in self.completed_words:
 			self.clearword()
 		else:
@@ -411,11 +413,9 @@ class dice: #in the dice class we will be assigning dice values and beggining to
 				dice-=1
 		for i in range(4):
 			print(self.board[i])
-	def destroy(self): #function to destroy (destroy is a built in)
-		root.destroy()
 
 		
-dice_roll = dice(Tk()) #callinf fuction and class
+#dice_roll = dice(Tk()) #callinf fuction and class
 
 #more in read me 
 

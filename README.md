@@ -3,7 +3,7 @@
 ### Plan
 
 #### description:
-Revant and Will's Boggle class is a project with the objective of practicing classes and functions in a functioning game. 
+Revant Boggle class is a project with the objective of practicing classes and functions in a functioning game. 
 
 helpful links: 
 [Boggle Rules!](http://www.fun-with-words.com/play_boggle.html)
@@ -69,24 +69,6 @@ Dice.values() – randomized (or somewhat randomized for each dice (6 values for
 
 
 Main runner will call the classes and set the variables
-
-_________________________________________________________________________________________________________________________
-
-#### Who is working on what?
-will:
-
-* plan 
-* readme 
-* point score
-* check 
-* runner
-
-Revant: 
-
-* dice class 
-* User interface class 
-* main runner
-* check
 
 
 
